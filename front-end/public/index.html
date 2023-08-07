@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="tr" data-bs-theme="dark">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="description" content="Havaalanı" />
+  <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+  <title>Havaalanı</title>
+  <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+    crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div id="root"></div>
+</body>
+
+<script>
+  $(document).ready(function () {
+    $(".akortbtn").click(function () {
+      $(".sssicrk").removeClass("aktif");
+      $(this).next().addClass("aktif");
+    });
+
+    $(".yukari-button").click(function (e) {
+      e.preventDefault();
+      $(document).scrollTop(0);
+    });
+
+    $(".menu-button").click(function (e) {
+      e.preventDefault();
+      $(".menu-container").addClass("aktif");
+      $("body").addClass("overflow-hidden");
+
+      $(".menu-cikis-button").click(function (e) {
+        e.preventDefault();
+        $(".menu-container").removeClass("aktif");
+        $("body").removeClass("overflow-hidden");
+      });
+    });
+
+    $(".yukari-button").click(function (e) {
+      e.preventDefault();
+      $("body").scrollTop(0);
+
+
+    });
+  });
+</script>
+
+</html>
